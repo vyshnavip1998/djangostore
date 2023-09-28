@@ -49,7 +49,7 @@ class Person(models.Model):
     birthdate = models.DateField(null=True , blank=True)
     age = models.IntegerField()
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
-    phone_number =models.IntegerField()
+    phone_number =models.PositiveBigIntegerField()
     email_id = models.EmailField(max_length=200)
     address = models.TextField(max_length=100)
     department = models.ForeignKey(Department, on_delete=models.SET_NULL, null=True)
